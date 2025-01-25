@@ -1,0 +1,32 @@
+name: Semgrep
+on: pull_request
+
+jobs:
+  semgrep:
+    name: Scan
+    runs-on: ubuntu-latest
+    container:
+      image: returntocorp/semgrep
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Important for diff
+      
+      # Get the base branch for comparison
+      - run: |
+          git fetch origin ${{ github.base_ref }}
+          
+      # Scan only changed files
+      - run: |
+          opengrep scan \
+            --diff \
+            --baseline-commit origin/${{ github.base_ref }} \
+            --sarif --output=semgrep.sarif
+        env:
+          SEMGREP_RULES: p/default
+
+      - name: Upload SARIF
+        uses: github/codeql-action/upload-sarif@v2
+        with:
+          sarif_file: semgrep.sarif
+        if: always()
