@@ -35,7 +35,9 @@ echo "Connecting with password: SuperSecret123!"
 ssh -o StrictHostKeyChecking=no user@host
 
 # VULNERABILITY: Hardcoded GitHub token
-GITHUB_TOKEN="ghp_1234567890abcdefghijklmnopqrstuvwxyz"
+GITHUB_TOKEN="ghp_x234567890abcdefghijklmnopqrstuvwxyz"
+GITHUB_TOKEN="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"
+
 git clone https://$GITHUB_TOKEN@github.com/user/repo.git
 
 # VULNERABILITY: Slack webhook hardcoded
