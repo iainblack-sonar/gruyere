@@ -1,0 +1,100 @@
+{
+  "description": "Vulnerable JSON Configuration - FOR TESTING PURPOSES ONLY",
+  "comment": "This file contains hardcoded credentials to test SonarQube secret detection",
+  
+  "database": {
+    "host": "localhost",
+    "port": 3306,
+    "username": "admin",
+    "password": "admin123",
+    "connection_string": "mysql://admin:admin123@localhost:3306/testdb"
+  },
+  
+  "postgres": {
+    "url": "postgresql://dbuser:dbpass123@localhost/mydb",
+    "password": "SuperSecret123!"
+  },
+  
+  "api": {
+    "key": "sk_1234567890abcdefghijklmnop",
+    "stripe_key": "sk_live_51234567890abcdefghijklmnop",
+    "openai_key": "sk-1234567890abcdefghijklmnopqrstuvwxyz"
+  },
+  
+  "aws": {
+    "access_key_id": "AKIAIOSFODNN7EXAMPLE",
+    "secret_access_key": "wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY",
+    "region": "us-east-1"
+  },
+  
+  "github": {
+    "token": "ghp_1234567890abcdefghijklmnopqrstuvwxyz",
+    "api_url": "https://api.github.com",
+    "oauth_token": "gho_1234567890abcdefghijklmnopqrstuvwxyz"
+  },
+  
+  "slack": {
+    "webhook": "https://hooks.slack.com/services/T00000000/B00000000/XXXXXXXXXXXXXXXXXXXX",
+    "bot_token": "xoxb-1234567890-1234567890-abcdefghijklmnopqrstuvwx"
+  },
+  
+  "mongodb": {
+    "uri": "mongodb://admin:password123@localhost:27017/mydb",
+    "host": "localhost",
+    "port": 27017,
+    "username": "admin",
+    "password": "password123",
+    "database": "mydb"
+  },
+  
+  "redis": {
+    "host": "localhost",
+    "port": 6379,
+    "password": "weak_redis_password",
+    "url": "redis://:weak_redis_password@localhost:6379/0"
+  },
+  
+  "docker": {
+    "username": "myuser",
+    "password": "MyDockerPassword123",
+    "registry": "registry.example.com"
+  },
+  
+  "npm": {
+    "token": "npm_1234567890abcdefghijklmnopqrstuvwxyz",
+    "registry": "https://registry.npmjs.org"
+  },
+  
+  "jwt": {
+    "secret": "super-secret-jwt-key-12345"
+  },
+  
+  "encryption": {
+    "key": "aes256-encryption-key-secret",
+    "secret_key": "django-insecure-secret-key-123456789"
+  },
+  
+  "twilio": {
+    "account_sid": "AC1234567890abcdefghijklmnopqrstuv",
+    "auth_token": "1234567890abcdefghijklmnopqrstuv"
+  },
+  
+  "sendgrid": {
+    "api_key": "SG.1234567890abcdefghijklmnop.1234567890abcdefghijklmnopqrstuvwxyz"
+  },
+  
+  "firebase": {
+    "api_key": "AIzaSyDaGmWKa4JsXZ-HjGw7ISLn_3namBGewQe",
+    "auth_domain": "myapp.firebaseapp.com",
+    "project_id": "myapp-12345",
+    "storage_bucket": "myapp.appspot.com",
+    "messaging_sender_id": "123456789012",
+    "app_id": "1:123456789012:web:abcdef123456"
+  },
+  
+  "oauth": {
+    "client_id": "1234567890-abcdefghijklmnop.apps.googleusercontent.com",
+    "client_secret": "GOCSPX-1234567890abcdefghijklmnop"
+  }
+}
+
